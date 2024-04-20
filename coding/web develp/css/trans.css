@@ -1,0 +1,26 @@
+.a{
+    height: 30%;
+    width: 30%;
+    margin: 10%;
+    background-color: aqua;
+    border: 10px;
+    border-style: solid;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+}
+div:hover{
+    background-color: blueviolet;
+}
+div:active{
+    background-color: palevioletred;
+}
+.b{
+    height: 30%;
+    width: 30%;
+    margin: 10%;
+    background-color:pink;
+    border: 10px;
+    border-style: solid;
+transform:rotate(30deg);}

@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+    padding: 0%;
+    margin: 0%;
+}
+.b{
+    height:40%;
+width :70%;
+background-color: aliceblue;
+border-radius: 2%;
+border-style: solid;
+margin: 10%;
+display: inline-block;
+
+}
+div{
+    display: flex;
+}
+.c{
+    height:60%;
+    width :10%;
+    background-color: blue;
+    border-radius: 2%;
+    border-style: solid;
+    display: flex;
+
+}
+.f{
+    height:60%;
+    width :10%;
+    background-color: palevioletred;
+    border-radius: 2%;
+    border-style: solid;
+    display: flex;
+
+}
+.d{
+    height:60%;
+    width :10%;
+    background-color: green;
+    border-radius: 2%;
+    border-style: solid;
+    display: flex;
+
+}
+.e{
+    height:60%;
+    width :10%;
+    background-color: green;
+    border-radius: 2%;
+    border-style: solid;
+    display: inline-block;
+
+}
