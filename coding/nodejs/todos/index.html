@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>todo</title>
+    </head>
+    <script>
+        function press() {
+            function handleSuccess(data) {
+                var z=document.getElementById("main");
+                //z.innerHTML=JSON.stringify(data);
+                for(var i=0;i<data.length;i++){
+                    var b= document.createElement("div");
+                b.innerHTML=data[i].id;
+                z.appendChild(b);
+                }
+               
+                console.log("Success:", data); 
+                   }
+
+            function handleError(error) {
+                console.error("Error:", error); // Log the error
+            }
+
+            // Function to process the fetch response
+            function call(resp) {
+                if (resp.ok) {
+                    resp.json().then(handleSuccess);
+                } else {
+                    throw new Error(`HTTP error! Status: ${resp.status}`);
+                }
+            }
+
+
+            fetch('http://localhost:9000/submit', {
+                method: 'GET'
+            })
+            .then(call)        // Process the response
+            .catch(handleError); // Catch and handle errors during the fetch
+        }
+    </script>
+    <body>
+        <h1>hello world</h1>
+        <input type="text" id="id" />
+        <input type="text" id="title" />
+        <button onclick="press()">submit</button>
+        <div id="main"></div>
+    </body>
+</html>
+

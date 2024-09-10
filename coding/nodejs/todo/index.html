@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            my first todo
+        </title>
+    </head>
+    <script>
+        function press(){
+             var x= document.getElementById("title").value ;
+    console.log(x);
+            function func(data){
+console.log(data);
+            }
+            function call(resp){
+                resp.json().then(func);
+            }
+            fetch('http://localhost:5000/',{
+                method:'POST',body:JSON.stringify({
+                    title:"gym",
+                    descri:"kfkfkkf",
+                })
+            }).then(call);
+        }
+    </script>
+    <body>
+        <form>
+            <input type="text" id="title"></input><br>
+            <input type="text" id="body"></input>
+            <button onclick="press()">send todo</button>
+        </form>
+    </body>
+</html>
